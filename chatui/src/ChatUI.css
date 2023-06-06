@@ -1,0 +1,56 @@
+
+  
+  .chat-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .chat-activity {
+    margin-bottom: 8px;
+  }
+  
+  .user-activity {
+    text-align: right;
+  }
+  
+  .bot-activity {
+    text-align: left;
+  }
+  
+  .chat-message {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Reduce the height to leave some space on top and bottom */
+    max-width: 1200px; /* Set a maximum width for the chat UI */
+    margin: 0 auto; /* Automatically center the chat UI horizontally */
+    margin-top: 20px; /* Add margin from the top */
+    margin-bottom: 20px; /* Add margin from the bottom */
+    background-color: lightgrey;
+    padding: 20px; /* Add padding inside the chat UI */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  }
+  
+  .chat-title {
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 24px;
+  }
+
+  .links-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .links-container > a {
+    margin-bottom: 8px;
+    text-decoration: underline;
+  }
