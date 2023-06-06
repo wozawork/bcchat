@@ -5,13 +5,27 @@
     overflow-y: auto;
     padding: 16px;
   }
+  .chat-answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+    margin-top: 8px; /* Add the margin-top property with the desired value */
+
+    border-radius: 8px; /* Add the border-radius property with the desired value */
+  }
+  
   
   .chat-activity {
     margin-bottom: 8px;
   }
   
   .user-activity {
-    text-align: right;
+    text-align: left;
+  }
+
+  .source-activity {
+    text-align: left;
   }
   
   .bot-activity {
@@ -51,6 +65,19 @@
   }
   
   .links-container > a {
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     text-decoration: underline;
   }
+
+  .chat-input {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .chat-input textarea {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
