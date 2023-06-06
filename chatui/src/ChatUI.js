@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Input, Button } from 'antd';
 import { Link } from 'react-router-dom';
+
+import person from './person.png';
+import bclogo from './bc-logo.png';
+import doculogo from './documents.png';
 import './ChatUI.css';
 
 const ChatUI = () => {
@@ -17,8 +21,12 @@ const ChatUI = () => {
 
         const textWithheader = (
             <>
-                <h4>Question:</h4>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <span style={{ marginRight: '20px' }}>
+                    <img src={person} alt="Image" style={{ borderRadius:'10%' ,width: '40px', height: '40px' }} />
+                </span>
                 {text}{' '}
+                </div>
             </>
         )
         addMessageToChat('user', textWithheader);
@@ -31,18 +39,26 @@ const ChatUI = () => {
 
         const dataWithSources = (
             <>
-                <h4>Answer:</h4>
+                
+                
                 <div className='chat-answer'>
-                    {data}{' '}
+                <span style={{ marginRight: '20px' }}>
+                    <img src={bclogo} alt="Image" style={{ borderRadius:'10%' ,width: '40px', height: '40px' }} />
+                </span>
+                {' '}{data}
                 </div>
                 <br />
-                <h4>Sources:</h4>
+                <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                <span style={{ marginRight: '20px' }}>
+                    <img src={doculogo} alt="Image" style={{ borderRadius:'10%' ,width: '40px', height: '40px' }} />
+                </span>
                 <div className="links-container">
                     {sources.map((link, index) => (
                         <Link key={index} to={`${link.toLowerCase()}`}>
                             {link}
                         </Link>
                     ))}
+                </div>
                 </div>
             </>
         );
@@ -83,7 +99,11 @@ const ChatUI = () => {
 
 
     return (
-        <div><h2 className="chat-title">BCchat</h2> {/* Title element */}
+        <div>
+            <div className="chat-header">   
+            <h2 className="chat-title">BCchat
+            </h2> 
+            </div>
             <div className="chat-container">
 
                 <div className="chat-messages">

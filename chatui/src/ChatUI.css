@@ -51,6 +51,7 @@
     background-color: lightgrey;
     padding: 20px; /* Add padding inside the chat UI */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+    border-radius: 4px;
   }
   
   .chat-title {
